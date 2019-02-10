@@ -17,11 +17,8 @@ strings = data[::2]  # All Even line entries
 targets = data[1::2] # All Odd line entries
 
 for i in range(len(strings)):
-	string = strings[i]
-	target = targets[i]
-
 	st   = STree.STree(strings[i])
-	idxs = [str(idx + 1) for idx in st.find_all(target)]
-	#print(idxs)
+	idxs = [str(idx + 1) for idx in st.find_all(target[i])]
 	
+	# Write out solutions
 	with open(soln_file, 'a') as out: out.write(' '.join(idxs) + '\n')
