@@ -46,8 +46,8 @@ def get_cigar_string(reference, query):
     print(output)
     return output
 
-data_file = '../data/transposable-elements/8.txt'
-soln_file = '../solns/trans-elem-soln8.txt'
+data_file = '../data/transposable-elements/6.txt'
+soln_file = '../solns/transposable-elements/trans-elem-soln6.txt'
 plot_dir  = '../plots/'
 
 # Create out file
@@ -58,10 +58,10 @@ data = {}
 
 n,l,d = tuple([int(x) for x in open(data_file, 'r').readlines()[0].split()]) # First line
 seq   = open(data_file, 'r').readlines()[1].strip() # Second line
-print(len(seq))
-# Split String into all windows of size l
-templates = list(set(get_templates(seq, l)))
 
+# Split String into all windows of size l, add d for padding of additional possible indels
+templates = list(set(get_templates(seq, l)))
+print(len(templates))
 for temp in templates:
     positions, mismatches = slide_window(temp, seq, d)
     if len(positions) == n: 
