@@ -19,8 +19,8 @@ chronological ordering in time.
 """
 import Levenshtein as lv
 
-data_file = '../data/bacterial-communities/2.txt'
-soln_file = '../solns/bacterial-communities/bact-comm-soln2.txt'
+data_file = '../data/bacterial-communities/8.txt'
+soln_file = '../solns/bacterial-communities/bact-comm-soln8.txt'
 file_idx = 0
 
 def avg_igls(ref, rest):

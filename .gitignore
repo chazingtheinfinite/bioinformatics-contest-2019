@@ -2,3 +2,6 @@
 code/.DS_Store
 data/.DS_Store
 solns/.DS_Store
+code/phylomizer
+code/cigar-gen
+code/__pycache__
